@@ -1,0 +1,25 @@
+{
+  "name": "sotenbori-nightlife-island-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.0",
+    "ts-loader": "^8.0.14",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
