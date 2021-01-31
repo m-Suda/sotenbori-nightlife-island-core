@@ -1,14 +1,13 @@
 import { AbstractCustomerRank } from './AbstractCustomerRank';
 import { MOOD, Mood } from '../Mood';
-import { CustomerRankNames } from './CustomerRankConstants';
 
 export class Normally extends AbstractCustomerRank {
-    private _bestBoundary = 10;
-    private _goodMoodBoundary = 8;
-    private _normallyBoundary = 4;
+    private _goodMoodBoundary = 10;
+    private _normallyBoundary = 8;
+    private _badMoodBoundary = 4;
 
-    constructor(rankName: CustomerRankNames, paymentAmount: number) {
-        super(rankName, paymentAmount);
+    constructor() {
+        super('Normally', 50000);
     }
 
     /**
@@ -16,20 +15,20 @@ export class Normally extends AbstractCustomerRank {
      * @param comprehensiveEvaluation
      */
     public getCompatibilityWith(comprehensiveEvaluation: number): Mood {
-        if (this._bestBoundary < comprehensiveEvaluation) {
+        if (this._goodMoodBoundary < comprehensiveEvaluation) {
             return MOOD.BEST;
-        }
-
-        if (
-            this._goodMoodBoundary < comprehensiveEvaluation &&
-            comprehensiveEvaluation <= this._bestBoundary
-        ) {
-            return MOOD.GOOD_MOOD;
         }
 
         if (
             this._normallyBoundary < comprehensiveEvaluation &&
             comprehensiveEvaluation <= this._goodMoodBoundary
+        ) {
+            return MOOD.GOOD_MOOD;
+        }
+
+        if (
+            this._badMoodBoundary < comprehensiveEvaluation &&
+            comprehensiveEvaluation <= this._normallyBoundary
         ) {
             return MOOD.NORMALLY;
         }
