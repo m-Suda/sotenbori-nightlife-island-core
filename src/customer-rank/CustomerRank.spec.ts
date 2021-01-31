@@ -13,42 +13,42 @@ describe('CustomerRankClass', () => {
         });
         describe('getCompatibilityWith()', () => {
             test('総合判定が16のときBest', () => {
-                expect(millionaire.getCompatibilityWith(16).name).toBe(
+                expect(millionaire.getCompatibilityFrom(16).name).toBe(
                     MOOD.BEST.name
                 );
             });
             test('総合判定が15のときGoodMood', () => {
-                expect(millionaire.getCompatibilityWith(15).name).toBe(
+                expect(millionaire.getCompatibilityFrom(15).name).toBe(
                     MOOD.GOOD_MOOD.name
                 );
             });
             test('総合判定が14のときGoodMood', () => {
-                expect(millionaire.getCompatibilityWith(14).name).toBe(
+                expect(millionaire.getCompatibilityFrom(14).name).toBe(
                     MOOD.GOOD_MOOD.name
                 );
             });
             test('総合判定が13のときNormally', () => {
-                expect(millionaire.getCompatibilityWith(13).name).toBe(
+                expect(millionaire.getCompatibilityFrom(13).name).toBe(
                     MOOD.NORMALLY.name
                 );
             });
             test('総合判定が11のときNormally', () => {
-                expect(millionaire.getCompatibilityWith(11).name).toBe(
+                expect(millionaire.getCompatibilityFrom(11).name).toBe(
                     MOOD.NORMALLY.name
                 );
             });
             test('総合判定が10のときBadMood', () => {
-                expect(millionaire.getCompatibilityWith(10).name).toBe(
+                expect(millionaire.getCompatibilityFrom(10).name).toBe(
                     MOOD.BAD_MOOD.name
                 );
             });
             test('総合判定が7のときBadMood', () => {
-                expect(millionaire.getCompatibilityWith(7).name).toBe(
+                expect(millionaire.getCompatibilityFrom(7).name).toBe(
                     MOOD.BAD_MOOD.name
                 );
             });
             test('総合判定が6のときAnger', () => {
-                expect(millionaire.getCompatibilityWith(6).name).toBe(
+                expect(millionaire.getCompatibilityFrom(6).name).toBe(
                     MOOD.ANGER.name
                 );
             });
@@ -63,42 +63,42 @@ describe('CustomerRankClass', () => {
         });
         describe('getCompatibilityWith()', () => {
             test('総合判定が14のときBest', () => {
-                expect(richMan.getCompatibilityWith(14).name).toBe(
+                expect(richMan.getCompatibilityFrom(14).name).toBe(
                     MOOD.BEST.name
                 );
             });
             test('総合判定が13のときGoodMood', () => {
-                expect(richMan.getCompatibilityWith(13).name).toBe(
+                expect(richMan.getCompatibilityFrom(13).name).toBe(
                     MOOD.GOOD_MOOD.name
                 );
             });
             test('総合判定が11のときGoodMood', () => {
-                expect(richMan.getCompatibilityWith(11).name).toBe(
+                expect(richMan.getCompatibilityFrom(11).name).toBe(
                     MOOD.GOOD_MOOD.name
                 );
             });
             test('総合判定が10のときNormally', () => {
-                expect(richMan.getCompatibilityWith(10).name).toBe(
+                expect(richMan.getCompatibilityFrom(10).name).toBe(
                     MOOD.NORMALLY.name
                 );
             });
             test('総合判定が8のときNormally', () => {
-                expect(richMan.getCompatibilityWith(8).name).toBe(
+                expect(richMan.getCompatibilityFrom(8).name).toBe(
                     MOOD.NORMALLY.name
                 );
             });
             test('総合判定が7のときBadMood', () => {
-                expect(richMan.getCompatibilityWith(7).name).toBe(
+                expect(richMan.getCompatibilityFrom(7).name).toBe(
                     MOOD.BAD_MOOD.name
                 );
             });
             test('総合判定が5のときBadMood', () => {
-                expect(richMan.getCompatibilityWith(5).name).toBe(
+                expect(richMan.getCompatibilityFrom(5).name).toBe(
                     MOOD.BAD_MOOD.name
                 );
             });
             test('総合判定が4のときAnger', () => {
-                expect(richMan.getCompatibilityWith(4).name).toBe(
+                expect(richMan.getCompatibilityFrom(4).name).toBe(
                     MOOD.ANGER.name
                 );
             });
@@ -113,32 +113,32 @@ describe('CustomerRankClass', () => {
         });
         describe('getCompatibilityWith()', () => {
             test('総合判定が11のときBest', () => {
-                expect(normally.getCompatibilityWith(11).name).toBe(
+                expect(normally.getCompatibilityFrom(11).name).toBe(
                     MOOD.BEST.name
                 );
             });
             test('総合判定が10のときGoodMood', () => {
-                expect(normally.getCompatibilityWith(10).name).toBe(
+                expect(normally.getCompatibilityFrom(10).name).toBe(
                     MOOD.GOOD_MOOD.name
                 );
             });
             test('総合判定が9のときGoodMood', () => {
-                expect(normally.getCompatibilityWith(9).name).toBe(
+                expect(normally.getCompatibilityFrom(9).name).toBe(
                     MOOD.GOOD_MOOD.name
                 );
             });
             test('総合判定が8のときNormally', () => {
-                expect(normally.getCompatibilityWith(8).name).toBe(
+                expect(normally.getCompatibilityFrom(8).name).toBe(
                     MOOD.NORMALLY.name
                 );
             });
             test('総合判定が5のときNormally', () => {
-                expect(normally.getCompatibilityWith(5).name).toBe(
+                expect(normally.getCompatibilityFrom(5).name).toBe(
                     MOOD.NORMALLY.name
                 );
             });
             test('総合判定が4のときBadMood', () => {
-                expect(normally.getCompatibilityWith(4).name).toBe(
+                expect(normally.getCompatibilityFrom(4).name).toBe(
                     MOOD.BAD_MOOD.name
                 );
             });
@@ -153,22 +153,22 @@ describe('CustomerRankClass', () => {
         });
         describe('getCompatibilityWith()', () => {
             test('総合判定が8のときBest', () => {
-                expect(poverty.getCompatibilityWith(8).name).toBe(
+                expect(poverty.getCompatibilityFrom(8).name).toBe(
                     MOOD.BEST.name
                 );
             });
             test('総合判定が7のときGoodMood', () => {
-                expect(poverty.getCompatibilityWith(7).name).toBe(
+                expect(poverty.getCompatibilityFrom(7).name).toBe(
                     MOOD.GOOD_MOOD.name
                 );
             });
             test('総合判定が5のときGoodMood', () => {
-                expect(poverty.getCompatibilityWith(5).name).toBe(
+                expect(poverty.getCompatibilityFrom(5).name).toBe(
                     MOOD.GOOD_MOOD.name
                 );
             });
             test('総合判定が4のときNormally', () => {
-                expect(poverty.getCompatibilityWith(4).name).toBe(
+                expect(poverty.getCompatibilityFrom(4).name).toBe(
                     MOOD.NORMALLY.name
                 );
             });

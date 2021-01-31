@@ -43,7 +43,7 @@ export class Customer {
         const comprehensiveEvaluation =
             cast.preference[preference] + cast.behavior[purpose];
 
-        return this._rank.getCompatibilityWith(comprehensiveEvaluation);
+        return this._rank.getCompatibilityFrom(comprehensiveEvaluation);
     }
 
     /**

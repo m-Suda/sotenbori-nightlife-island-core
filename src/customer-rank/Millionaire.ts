@@ -15,7 +15,7 @@ export class Millionaire extends AbstractCustomerRank {
      * 客との相性を判定し、機嫌を取得する
      * @param comprehensiveEvaluation
      */
-    public getCompatibilityWith(comprehensiveEvaluation: number): Mood {
+    public getCompatibilityFrom(comprehensiveEvaluation: number): Mood {
         if (this._goodMoodBoundary < comprehensiveEvaluation) {
             return MOOD.BEST;
         }

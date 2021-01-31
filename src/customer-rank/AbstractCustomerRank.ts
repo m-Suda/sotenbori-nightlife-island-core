@@ -12,7 +12,7 @@ export abstract class AbstractCustomerRank {
         private _paymentAmount: number
     ) {}
 
-    public abstract getCompatibilityWith(comprehensiveEvaluation: number): Mood;
+    public abstract getCompatibilityFrom(comprehensiveEvaluation: number): Mood;
 
     public get name(): CustomerRankNames {
         return this._name;
