@@ -1,9 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Poverty = void 0;
-const AbstractCustomerRank_1 = require("./AbstractCustomerRank");
-const Mood_1 = require("../Mood");
-class Poverty extends AbstractCustomerRank_1.AbstractCustomerRank {
+import { AbstractCustomerRank } from './AbstractCustomerRank';
+import { MOOD } from '../Mood';
+export class Poverty extends AbstractCustomerRank {
     constructor() {
         super('Poverty', 20000);
         this._goodMoodBoundary = 7;
@@ -15,13 +12,12 @@ class Poverty extends AbstractCustomerRank_1.AbstractCustomerRank {
      */
     getCompatibilityFrom(comprehensiveEvaluation) {
         if (this._goodMoodBoundary < comprehensiveEvaluation) {
-            return Mood_1.MOOD.BEST;
+            return MOOD.BEST;
         }
         if (this._normallyBoundary < comprehensiveEvaluation &&
             comprehensiveEvaluation <= this._goodMoodBoundary) {
-            return Mood_1.MOOD.GOOD_MOOD;
+            return MOOD.GOOD_MOOD;
         }
-        return Mood_1.MOOD.NORMALLY;
+        return MOOD.NORMALLY;
     }
 }
-exports.Poverty = Poverty;

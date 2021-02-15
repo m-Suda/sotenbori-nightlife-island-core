@@ -1,12 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AbstractCustomerRank = void 0;
 /**
  * 客ランクの抽象クラス
  * @property _name ランク名
  * @property _paymentAmount 支払い金額
  */
-class AbstractCustomerRank {
+export class AbstractCustomerRank {
     constructor(_name, _paymentAmount) {
         this._name = _name;
         this._paymentAmount = _paymentAmount;
@@ -18,4 +15,3 @@ class AbstractCustomerRank {
         return this._paymentAmount;
     }
 }
-exports.AbstractCustomerRank = AbstractCustomerRank;

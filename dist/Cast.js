@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Cast = void 0;
-class Cast {
+export class Cast {
     constructor(name, rank, hp, preference, behavior) {
         this.name = name;
         this.rank = rank;
@@ -28,4 +25,3 @@ class Cast {
         this.hp += recoveryPoint;
     }
 }
-exports.Cast = Cast;

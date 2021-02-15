@@ -1,9 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.RichMan = void 0;
-const AbstractCustomerRank_1 = require("./AbstractCustomerRank");
-const Mood_1 = require("../Mood");
-class RichMan extends AbstractCustomerRank_1.AbstractCustomerRank {
+import { AbstractCustomerRank } from './AbstractCustomerRank';
+import { MOOD } from '../Mood';
+export class RichMan extends AbstractCustomerRank {
     constructor() {
         super('RichMan', 100000);
         this._goodMoodBoundary = 13;
@@ -17,21 +14,20 @@ class RichMan extends AbstractCustomerRank_1.AbstractCustomerRank {
      */
     getCompatibilityFrom(comprehensiveEvaluation) {
         if (this._goodMoodBoundary < comprehensiveEvaluation) {
-            return Mood_1.MOOD.BEST;
+            return MOOD.BEST;
         }
         if (this._normallyBoundary < comprehensiveEvaluation &&
             comprehensiveEvaluation <= this._goodMoodBoundary) {
-            return Mood_1.MOOD.GOOD_MOOD;
+            return MOOD.GOOD_MOOD;
         }
         if (this._badMoodBoundary < comprehensiveEvaluation &&
             comprehensiveEvaluation <= this._normallyBoundary) {
-            return Mood_1.MOOD.NORMALLY;
+            return MOOD.NORMALLY;
         }
         if (this._angerBoundary < comprehensiveEvaluation &&
             comprehensiveEvaluation <= this._badMoodBoundary) {
-            return Mood_1.MOOD.BAD_MOOD;
+            return MOOD.BAD_MOOD;
         }
-        return Mood_1.MOOD.ANGER;
+        return MOOD.ANGER;
     }
 }
-exports.RichMan = RichMan;

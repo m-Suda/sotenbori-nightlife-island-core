@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Customer = void 0;
-class Customer {
+export class Customer {
     constructor(_rank, _preference, _purpose, _course, _mood = null) {
         this._rank = _rank;
         this._preference = _preference;
@@ -43,4 +40,3 @@ class Customer {
         this._mood = m;
     }
 }
-exports.Customer = Customer;

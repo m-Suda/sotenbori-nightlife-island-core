@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MOOD_NAME = exports.MOOD = void 0;
-exports.MOOD = {
+export const MOOD = {
     FEVER: {
         name: 'Fever',
         paymentCycleMs: 1000,
@@ -33,7 +30,7 @@ exports.MOOD = {
         coefficient: 50,
     },
 };
-exports.MOOD_NAME = {
+export const MOOD_NAME = {
     Fever: 'フィーバー',
     Best: '最高',
     GoodMood: '上機嫌',

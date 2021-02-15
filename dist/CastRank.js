@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CAST_RANK_NAME = exports.CAST_RANK = void 0;
-exports.CAST_RANK = {
+export const CAST_RANK = {
     PLATINUM: {
         name: 'Platinum',
         cost: 400000,
@@ -19,7 +16,7 @@ exports.CAST_RANK = {
         cost: 50000,
     },
 };
-exports.CAST_RANK_NAME = {
+export const CAST_RANK_NAME = {
     Platinum: 'プラチナ',
     Gold: 'ゴールド',
     Silver: 'シルバー',
